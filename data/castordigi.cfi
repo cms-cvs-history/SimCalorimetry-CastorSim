@@ -1,0 +1,16 @@
+module castorDigis = CastorDigiProducer 
+{
+  bool doTimeSlew = true
+  bool doNoise = true
+
+   PSet castor = {
+    double simHitToPhotoelectrons = 6
+    double photoelectronsToAnalog = 1.843
+    double timePhase = -4
+    int32 readoutFrameSize = 6
+    int32 binOfMaximum = 4
+    bool doPhotoStatistics = true
+    bool syncPhase = true
+  }
+}
+
