@@ -7,6 +7,7 @@ module castorDigis = CastorDigiProducer
     double simHitToPhotoelectrons = 6
     double photoelectronsToAnalog = 1.843
     double timePhase = -4
+    double samplingFactor = 0.267 // pe/GeV
     int32 readoutFrameSize = 6
     int32 binOfMaximum = 4
     bool doPhotoStatistics = true
