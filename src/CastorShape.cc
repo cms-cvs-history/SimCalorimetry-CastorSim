@@ -5,7 +5,6 @@ CastorShape::CastorShape()
 : nbin_(256),
   nt_(nbin_, 0.)
 {   
-  setTpeak(2.0);
   computeShapeCastor();
 }
 
@@ -15,7 +14,6 @@ CastorShape::CastorShape(const CastorShape&d)
   nbin_(d.nbin_),
   nt_(d.nt_)
 {
-  setTpeak(2.0);
 }
 
   
@@ -56,8 +54,8 @@ double CastorShape::operator () (double time) const
     return 0.0;
 }
 
-double CastorShape::derivative (double time) const
+double
+CastorShape::timeToRise() const
 {
-  return 0.0;
-}
-  
+   return 0.0 ;
+}  
