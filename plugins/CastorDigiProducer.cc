@@ -31,7 +31,7 @@ CastorDigiProducer::CastorDigiProducer(const edm::ParameterSet& ps, edm::EDProdu
   theCastorHits()
 {
   
-  mixMod.produces<CastorDigiCollection>();
+  mixMod.produces<CastorDigiCollection>("simCastorDigis");
 
   theCastorResponse->setHitFilter(&theCastorHitFilter);
 
@@ -130,7 +130,7 @@ void CastorDigiProducer::finalizeEvent(edm::Event& e, const edm::EventSetup& eve
   edm::LogInfo("CastorDigiProducer") << "HCAL/Castor digis   : " << castorResult->size();
 
   // Step D: Put outputs into event
-  e.put(castorResult);
+  e.put(castorResult, "simCastorDigis");
 }
 
 
