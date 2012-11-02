@@ -5,7 +5,7 @@ simCastorDigis = cms.EDProducer("CastorDigiProducer",
     doTimeSlew = cms.bool(True),
     castor = cms.PSet(
         readoutFrameSize = cms.int32(6),
-        binOfMaximum = cms.int32(4),
+        binOfMaximum = cms.int32(5),
         samplingFactor = cms.double(16.75), ## pe/GeV
 
         doPhotoStatistics = cms.bool(True),
